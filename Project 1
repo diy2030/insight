@@ -1,0 +1,29 @@
+// Word Count Program in ".java"
+import java.io.* ;
+public class CountWords 
+{
+  public static void main ()
+    {
+        String str = String line : Files.readAllLines(Paths.get("/wc_input/"))
+        String[] splitStr = str.split(" ");
+        int count = 0;
+        List<String> list = new ArrayList<>();
+        for(String s:splitStr){
+            if(!list.contains(s)){
+                list.add(s);
+            }
+        }
+        for(int i=0;i<list.size();i++){
+            for(int j=0;j<splitStr.length;j++){
+                if(list.get(i).equals(splitStr[j])){
+                    count++;
+                }
+            }
+            return(list.get(i) + " = " + count);
+            System.out.println("/wc_output/wc_result.txt")
+            count=0;
+        }
+      }
+    }  
+    
+    
